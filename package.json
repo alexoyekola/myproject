@@ -1,5 +1,5 @@
 {
-  "name": "Automation_Framework",
+  "name": "AutomationFramework_v1",
   "version": "1.0.0",
   "description": "Automation Scripts",
   "main": "nightwatch.js",
