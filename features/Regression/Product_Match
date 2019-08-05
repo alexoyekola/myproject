@@ -1,0 +1,7 @@
+  @Match_Product
+  Scenario: Product Matching Screen: target product 
+
+    Given   User is on product matching screen
+    When    User sets status and selects product
+    Then    User edits product details
+    Then    User successfully saved product match

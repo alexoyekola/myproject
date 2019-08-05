@@ -1,0 +1,13 @@
+  @Mark_Done
+  Scenario: Input Management Screen: Mark a source file with loaded status as done
+
+    Given   User is on input management screen
+    When    User locates source file with status Loaded and marks as done
+    Then    User successfully changed status to done
+
+  @Mark_Not_Done
+  Scenario: Input Management Screen: Mark a source file with done status as not done
+
+    Given   User is on input management screen
+    When    User locates source file with status Done and marks as not done
+    Then    User successfully changed status to not done
