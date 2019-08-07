@@ -1,7 +1,0 @@
-
-  @Sort_Function_Input_Management
-  Scenario: Input Management Screen: Sort column entries alphabetically or numerically
-
-    Given   User is on input management screen
-    When    User uses sort options IM
-    Then    User successfully used sorts
