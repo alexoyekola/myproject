@@ -14,14 +14,18 @@ Before("@BaseURL", () => {
 
 // Login Testing
 Given(/^User is on the login screen$/, () => {  
-    Page.waitForElementVisible('@UsernameInput').setValue('@UsernameInput', 'alexoyekola@piccadillygroup.com' )
+    return Page.waitForElementVisible('@UsernameInput')
 })
 
 When(/^User enters username: "([^"]*)" and password: "([^"]*)"$/, (username,password) => {  
     // Enter login credentials
-    Page.waitForElementVisible('@UsernameInput').setValue('@UsernameInput', username)
-    Page.waitForElementVisible('@PasswordInput').setValue('@PasswordInput', password)
+    Page.waitForElementVisible('@UsernameInput').setValue('@UsernameInput', 'alexoyekola@piccadillygroup.com')
+    Page.waitForElementVisible('@ConfirmUsername').click('@ConfirmUsername')
+    Page.waitForElementVisible('@PasswordInput').setValue('@PasswordInput', 'Dragonfly1!')
     return Page.click('@LoginBtn')
+})
+Then(/^User successfully logged into Forsight/, () => {
+    return Page.waitForElementVisible('@Logo')
 })
 Then(/^User receives the error messages "([^"]*)" or "([^"]*)"$/, (usernameerror, passworderror) => {
     // Error Messages login

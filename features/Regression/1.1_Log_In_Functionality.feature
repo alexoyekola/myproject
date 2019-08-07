@@ -5,5 +5,5 @@ Feature: Regression: Log In Functionality
   Scenario: Login Functionality: Login successful
 
     Given   User is on the login screen
-    When    User enters
+    When    User enters username: "Username" and password: "Password"
     Then    User successfully logged into Forsight
