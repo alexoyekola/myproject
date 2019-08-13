@@ -12,6 +12,7 @@
   "devDependencies": {
     "cucumber": "4.0.0",
     "cucumber-html-reporter": "^4.0.2",
+    "html-dnd": "^1.2.0",
     "nightwatch": "^0.9.20",
     "nightwatch-cucumber": "^9.1.2"
   },

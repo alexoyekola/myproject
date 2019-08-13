@@ -53,7 +53,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 6000000
+              "duration": 1000000
             }
           },
           {
@@ -66,20 +66,20 @@
             },
             "result": {
               "status": "passed",
-              "duration": 24404000000
+              "duration": 11056000000
             }
           },
           {
             "arguments": [],
             "keyword": "When ",
             "line": 8,
-            "name": "User enters username: \"UserName\" and password: \"Password\"",
+            "name": "User enters username: \"Username\" and password: \"Password\"",
             "match": {
               "location": "features\\step_definitions\\steps.js:20"
             },
             "result": {
               "status": "passed",
-              "duration": 6647000000
+              "duration": 1426000000
             }
           },
           {
@@ -92,7 +92,119 @@
             },
             "result": {
               "status": "passed",
-              "duration": 13174000000
+              "duration": 3498000000
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "keyword": "Feature",
+    "name": "Regression: End to End Test",
+    "line": 2,
+    "id": "regression:-end-to-end-test",
+    "tags": [
+      {
+        "name": "@BaseURL",
+        "line": 1
+      },
+      {
+        "name": "@Forsight_Regression",
+        "line": 1
+      },
+      {
+        "name": "@E2E_Test",
+        "line": 1
+      }
+    ],
+    "uri": "features\\Regression\\2.1_E2E_Test.feature",
+    "elements": [
+      {
+        "id": "regression:-end-to-end-test;end-to-end-test---upload-file-mitigated",
+        "keyword": "Scenario",
+        "line": 5,
+        "name": "End to End test - upload file mitigated",
+        "tags": [
+          {
+            "name": "@BaseURL",
+            "line": 1
+          },
+          {
+            "name": "@Forsight_Regression",
+            "line": 1
+          },
+          {
+            "name": "@E2E_Test",
+            "line": 1
+          },
+          {
+            "name": "@Flow",
+            "line": 4
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "features\\step_definitions\\steps.js:11"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 8,
+            "name": "User is on the home page",
+            "match": {
+              "location": "features\\step_definitions\\steps.js:40"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3701000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 9,
+            "name": "User navigates to design screen",
+            "match": {
+              "location": "features\\step_definitions\\steps.js:47"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2284000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 10,
+            "name": "User inputs design details and saves",
+            "match": {
+              "location": "features\\step_definitions\\steps.js:56"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4641000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 11,
+            "name": "User successfully created new design",
+            "match": {
+              "location": "features\\step_definitions\\steps.js:63"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 62000000
             }
           }
         ]
