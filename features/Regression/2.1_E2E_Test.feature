@@ -8,4 +8,6 @@ Feature: Regression: End to End Test
     Given   User is on the home page
     When    User navigates to design screen
     Then    User inputs design details and saves
+    Then    User adds activities
     Then    User successfully created new design
+    Then    User updates upload activities

@@ -23,8 +23,21 @@ module.exports = {
         TypeValue: {selector: '#\38 2921faa-c4e5-8808-4687-e6ed09c37346 > div:nth-child(1)', locateStrategy: 'css selector'},
         Create_DesignBtn: {selector: 'body > app-root > div.main-content > div > new-process-definition > div > div:nth-child(8) > div.col-md-12.m-t-40 > button.form-btn.float-right.footer-btn-pos.m-l-24.ng-star-inserted', locateStrategy: 'css selector'},
         DesignUpdatedPopUp: {selector: 'body > div.cdk-visually-hidden', locateStrategy: 'css selector'},
-        // Activity
+        SaveBtn: {selector: 'body > app-root > div.main-content > div > new-process-definition > div > div:nth-child(8) > div.col-md-12.m-t-40 > button.form-btn.float-right.footer-btn-pos.m-l-24', locateStrategy: 'css selector'},
+        // Activity Page
         NewActivityBtn: {selector: '//*[@id="add-activity-btn"]/div/div/div', locateStrategy: 'xpath'},
+        ActivityDD: {selector: '//*[@id="1b24b4a3-ead6-edfa-cef1-8d3059b334e3"]/span/img', locateStrategy: 'xpath'},
         AddActivityBtn: {selector: '#add-activity-dropdown > div > div.body > button', locateStrategy: 'css selector'},
+        // Activity Details
+        UploadTableDataActivity: {selector: '//*[@id="activity-diagram-component"]/svg/g/g[2]/g[4]/g/text', locateStrategy: 'xpath'},
+        TransformTableDataActivity: {selector: '//*[@id="activity-diagram-component"]/svg/g/g[2]/g[6]/rect', locateStrategy: 'xpath'},
+        VATSummaryActivity: {selector :'#activity-diagram-component > svg > g > g:nth-child(2) > g:nth-child(12) > g > text', locateStrategy: 'css selector'},
+        UploadSampleBtn: {selector: '#btnUpload--522888603', locateStrategy: 'css selector'},
+        OutputTableNameInput: {selector: '//*[@id="container-83ea5e93-cf6d-4f0c-a76a-898fb63357b0"]/div/div[1]/div[3]/div[1]/input', locateStrategy: 'xpath'},
+        OutputTableNameSaveBtn: {selector: '#container-d1eade08-3659-4f74-843a-c3406a7ed378 > div > div:nth-child(1) > div:nth-child(9) > div.col-3 > button', locateStrategy: 'css selector'},
+        SelectHeaderRowBtn: {selector: '#container-d1eade08-3659-4f74-843a-c3406a7ed378 > div > div:nth-child(1) > div:nth-child(17) > div.m-b-16 > button:nth-child(2)', locateStrategy: 'css selector'},
+        SelectHeaderRowInput: {selector: '#collapseExample--522888603 > div > fieldset > table > tbody > tr:nth-child(1) > td:nth-child(2) > input', locateStrategy: 'css selector'},
+        ConfirmHeadRowBtn: {selector: '#collapseExample--522888603 > div > fieldset > table > tbody > tr:nth-child(2) > td > button:nth-child(2)', locateStrategy: 'css selector'},
+        ConfirmSelectionBtn: {selector: '#container-d1eade08-3659-4f74-843a-c3406a7ed378 > div > div:nth-child(1) > div:nth-child(17) > fieldset > button', locateStrategy: 'css selector'},
         }
 }
