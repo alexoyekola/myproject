@@ -4,7 +4,6 @@ Feature: Regression: End to End Test
   @Flow
   Scenario: End to End test - upload file mitigated
 
-    
     Given   User is on the home page
     When    User navigates to design screen
     Then    User inputs design details and saves

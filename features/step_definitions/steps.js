@@ -44,6 +44,7 @@ Given(/^User is on the home page/, () => {
     Page.click('@LoginBtn')
     return Page.waitForElementVisible('@Logo')
 })
+//Designs Screen
 When(/^User navigates to design screen/, () => {
     Page.waitForElementVisible('@ProcessManagementIcon', 30000)
     Page.click('@ProcessManagementIcon')
@@ -95,4 +96,49 @@ Then(/^User updates upload activities/, () => {
     client.pause(3000)
     Page.waitForElementVisible('@SaveBtn').click('@SaveBtn')
     return client.pause(3000)
+})
+//Entities Screen
+Given(/^User is on the entities screen/, () => {
+    Page.waitForElementVisible('@UsernameInput').setValue('@UsernameInput', 'alexanderoyekola@piccadillygroup.com')
+    Page.waitForElementVisible('@ConfirmUsername').click('@ConfirmUsername')
+    Page.waitForElementVisible('@PasswordInput').setValue('@PasswordInput', 'Dragonfly1!')
+    Page.click('@LoginBtn')
+    Page.waitForElementVisible('@Logo')
+    Page.waitForElementVisible('@OrganisationSettingsIcon', 30000).click('@OrganisationSettingsIcon')
+    client.pause(1000)
+    Page.waitForElementVisible('@OrganisationSettingsText')
+    Page.waitForElementVisible('@EntitiesIcon', 30000).click('@EntitiesIcon')
+    return Page.click('@EntitiesIcon')
+})
+When(/^User creates new entity/, () => {
+    Page.waitForElementVisible('@NewEntityBtn').click('@NewEntityBtn')
+    Page.click('@NewEntityBtn')
+    Page.waitForElementVisible('@NewEntityNameInput').setValue('@NewEntityNameInput', 'Test_Entity')
+    Page.waitForElementVisible('@NewEntitySaveBtn')
+    return Page.click('@NewEntitySaveBtn')
+})
+Then(/^User has successfully created new entity/, () => {
+    Page.waitForElementVisible('@EntitiesTitle')
+    return client.pause(2000)
+})
+When(/^User copies an entity/, () => {
+    Page.waitForElementVisible('@EntityDetailsBtn').click('@EntityDetailsBtn')
+    client.pause(1000)
+    Page.waitForElementVisible('@CopyEntityBtn').click('@CopyEntityBtn')
+    Page.click('@CopyEntityBtn')
+    client.pause(1000)
+    Page.waitForElementVisible('@CopyBtn')
+    return Page.click('@CopyBtn')
+})
+Then(/^User has successfully copied an entity/, () => {
+    return Page.waitForElementVisible('@SuccessfulMessage')
+})
+When(/^User selects to hide an entity/, () => {
+    Page.waitForElementVisible('@EntityDetailsBtn').click('@EntityDetailsBtn')
+    Page.waitForElementVisible('@HideEntityBtn')
+    client.pause(1000)
+    return Page.click('@HideEntityBtn')
+})
+Then(/^User has successfully hidden an entity/, () => {
+    return Page.waitForElementVisible('@SuccessfulMessage')
 })
