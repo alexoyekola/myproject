@@ -142,3 +142,30 @@ When(/^User selects to hide an entity/, () => {
 Then(/^User has successfully hidden an entity/, () => {
     return Page.waitForElementVisible('@SuccessfulMessage')
 })
+//Periods screen 
+Given(/^User is on the periods screen/, () => {
+    Page.waitForElementVisible('@UsernameInput').setValue('@UsernameInput', 'alexanderoyekola@piccadillygroup.com')
+    Page.waitForElementVisible('@ConfirmUsername').click('@ConfirmUsername')
+    Page.waitForElementVisible('@PasswordInput').setValue('@PasswordInput', 'Dragonfly1!')
+    Page.click('@LoginBtn')
+    Page.waitForElementVisible('@Logo')
+    Page.waitForElementVisible('@OrganisationSettingsIcon', 30000).click('@OrganisationSettingsIcon')
+    client.pause(1000)
+    Page.waitForElementVisible('@OrganisationSettingsText')
+    Page.waitForElementVisible('@PeriodsIcon', 30000).click('@PeriodsIcon')
+    return Page.click('@PeriodsIcon')
+})
+When(/^User creates new period/, () => {
+    Page.waitForElementVisible('@NewPeriodBtn').click('@NewPeriodBtn')
+    Page.waitForElementVisible('@NewPeriodNameInput').setValue('@NewPeriodNameInput', 'test_Monthly')
+    client.pause(8000)
+    Page.waitForElementVisible('@SelectDateBtn').click('@SelectDateBtn')
+    Page.click('@SelectDateBtn')
+    Page.waitForElementVisible('@DateAug01').click('@DateAug01')
+    Page.waitForElementVisible('@PrePopulateBtn').click('@PrePopulateBtn')
+    Page.waitForElementVisible('@NewPeriodSaveBtn')
+    return Page.click('@NewPeriodSaveBtn')
+})
+Then(/^User has successfully created new period/, () => {
+    return Page.waitForElementVisible('@SuccessfulMessage')
+})

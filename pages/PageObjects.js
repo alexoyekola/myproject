@@ -48,6 +48,7 @@ module.exports = {
         UserGroupsIcon: {selector: '//*[@id="organisation-settings-expandable"]/li[4]/div[1]', locateStrategy: 'xpath'},
         AttributesIcon: {selector: '//*[@id="organisation-settings-expandable"]/li[5]/div[1]', locateStrategy: 'xpath'},
         SettingsIcon: {selector: '//*[@id="organisation-settings-expandable"]/li[6]/div[1]', locateStrategy: 'xpath'},
+        SuccessfulMessage: {selector: '/html/body/div[1]', locateStrategy: 'xpath'},
         //Entities 
         EntitiesTitle: {selector: '/html/body/app-root/div[2]/div/account/div/div[2]/app-entities/h4', locateStrategy: 'xpath'},
         NewEntityBtn: {selector: '/html/body/app-root/div[2]/div/account/div/div[1]/div/add-button[1]/div/div/div[1]', locateStrategy: 'xpath'},
@@ -58,7 +59,18 @@ module.exports = {
         EntityDetailsBtn: {selector: '/html/body/app-root/div[2]/div/account/div/div[2]/app-entities/div/generic-table/div/div[1]/table/tbody/tr[1]/td[4]/div', locateStrategy: 'xpath'},
         CopyEntityBtn: {selector: '#cdk-overlay-0 > div > div > button:nth-child(1)', locateStrategy: 'css selector'},
         CopyBtn: {selector: '//*[@id="cloneModal"]/div/div/div[3]/button[2]', locateStrategy: 'xpath'},
-        SuccessfulMessage: {selector: '/html/body/div[1]', locateStrategy: 'xpath'},
         HideEntityBtn: {selector: '#cdk-overlay-0 > div > div > button:nth-child(2)', locateStrategy: 'css selector'},
+        //Periods
+        NewPeriodBtn: {selector: '/html/body/app-root/div[2]/div/account/div/div[1]/div/add-button/div/div/div[2]', locateStrategy: 'xpath'},
+        NewPeriodNameInput: {selector: 'body > app-root > div.main-content > div > schedule-edit > div > div.row.m-t-64 > div.col-lg-7 > input', locateStrategy: 'css selector'},
+        PeriodTypeDD: {selector: '#\32 419d50c-58fc-97ac-b7bf-eab6f375c898', locateStrategy: 'css selector'},
+        AnnuallyPeriodType: {selector: '//*[@id="a7292aea-8ba4-b888-21c3-2ac367beab39"]/div[1]', locateStrategy: 'xpath'},
+        BiannuallyPeriodType: {selector: '//*[@id="a7292aea-8ba4-b888-21c3-2ac367beab39"]/div[2]', locateStrategy: 'xpath'},
+        QuarterlyPeriodType: {selector: '//*[@id="a7292aea-8ba4-b888-21c3-2ac367beab39"]/div[3]', locateStrategy: 'xpath'},
+        MonthlyPeriodType: {selector: '//*[@id="a7292aea-8ba4-b888-21c3-2ac367beab39"]/div[4]', locateStrategy: 'xpath'},
+        SelectDateBtn: {selector: 'body > app-root > div.main-content > div > schedule-edit > div > div.row.animated.fadeInUp.m-t-8.m-t-24.ng-star-inserted > div:nth-child(2) > labeled-datepicker > div > div.labeled-datepicker-container > mat-datepicker-toggle > button > span', locateStrategy: 'css selector'},
+        DateAug01: {selector: '//*[@id="mat-datepicker-8"]/div[2]/mat-month-view/table/tbody/tr[1]/td[2]/div', locateStrategy: 'xpath'},
+        PrePopulateBtn: {selector: '//*[@id="populate0"]/a', locateStrategy: 'xpath'},
+        NewPeriodSaveBtn: {selector: '/html/body/app-root/div[2]/div/schedule-edit/div/div[16]/div[2]/button', locateStrategy: 'xpath'}, 
         }
 }

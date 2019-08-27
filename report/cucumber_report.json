@@ -18,17 +18,17 @@
         "line": 1
       },
       {
-        "name": "@Entities_Functionality",
+        "name": "@Periods_Functionality",
         "line": 1
       }
     ],
-    "uri": "features\\Regression\\2.1_Entities_Functionality.feature",
+    "uri": "features\\Regression\\3.1_Periods_Functionality.feature",
     "elements": [
       {
-        "id": "regression:-organisation-settings-functionality;creating-entities-successfully",
+        "id": "regression:-organisation-settings-functionality;creating-period-successfully",
         "keyword": "Scenario",
         "line": 5,
-        "name": "Creating entities successfully",
+        "name": "Creating period successfully",
         "tags": [
           {
             "name": "@BaseURL",
@@ -43,11 +43,11 @@
             "line": 1
           },
           {
-            "name": "@Entities_Functionality",
+            "name": "@Periods_Functionality",
             "line": 1
           },
           {
-            "name": "@Create_Entity",
+            "name": "@Create_Period",
             "line": 4
           }
         ],
@@ -68,199 +68,39 @@
             "arguments": [],
             "keyword": "Given ",
             "line": 7,
-            "name": "User is on the entities screen",
+            "name": "User is on the periods screen",
             "match": {
-              "location": "features\\step_definitions\\steps.js:101"
+              "location": "features\\step_definitions\\steps.js:146"
             },
             "result": {
               "status": "passed",
-              "duration": 19530000000
+              "duration": 11805000000
             }
           },
           {
             "arguments": [],
             "keyword": "When ",
             "line": 8,
-            "name": "User creates new entity",
+            "name": "User creates new period",
             "match": {
-              "location": "features\\step_definitions\\steps.js:113"
+              "location": "features\\step_definitions\\steps.js:158"
             },
             "result": {
               "status": "passed",
-              "duration": 1685000000
+              "duration": 10921000000
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
             "line": 9,
-            "name": "User has successfully created new entity",
+            "name": "User has successfully created new period",
             "match": {
-              "location": "features\\step_definitions\\steps.js:120"
+              "location": "features\\step_definitions\\steps.js:169"
             },
             "result": {
               "status": "passed",
-              "duration": 2066000000
-            }
-          }
-        ]
-      },
-      {
-        "id": "regression:-organisation-settings-functionality;copying-entities-successfully",
-        "keyword": "Scenario",
-        "line": 12,
-        "name": "Copying entities successfully",
-        "tags": [
-          {
-            "name": "@BaseURL",
-            "line": 1
-          },
-          {
-            "name": "@Forsight_Regression",
-            "line": 1
-          },
-          {
-            "name": "@Organisation_Settings",
-            "line": 1
-          },
-          {
-            "name": "@Entities_Functionality",
-            "line": 1
-          },
-          {
-            "name": "@Copy_Entity",
-            "line": 11
-          }
-        ],
-        "type": "scenario",
-        "steps": [
-          {
-            "keyword": "Before",
-            "hidden": true,
-            "match": {
-              "location": "features\\step_definitions\\steps.js:11"
-            },
-            "result": {
-              "status": "passed"
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Given ",
-            "line": 14,
-            "name": "User is on the entities screen",
-            "match": {
-              "location": "features\\step_definitions\\steps.js:101"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 4357000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "When ",
-            "line": 15,
-            "name": "User copies an entity",
-            "match": {
-              "location": "features\\step_definitions\\steps.js:124"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 3037000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Then ",
-            "line": 16,
-            "name": "User has successfully copied an entity",
-            "match": {
-              "location": "features\\step_definitions\\steps.js:133"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 120000000
-            }
-          }
-        ]
-      },
-      {
-        "id": "regression:-organisation-settings-functionality;hiding-entities-successfully",
-        "keyword": "Scenario",
-        "line": 19,
-        "name": "Hiding entities successfully",
-        "tags": [
-          {
-            "name": "@BaseURL",
-            "line": 1
-          },
-          {
-            "name": "@Forsight_Regression",
-            "line": 1
-          },
-          {
-            "name": "@Organisation_Settings",
-            "line": 1
-          },
-          {
-            "name": "@Entities_Functionality",
-            "line": 1
-          },
-          {
-            "name": "@Hide_Entity",
-            "line": 18
-          }
-        ],
-        "type": "scenario",
-        "steps": [
-          {
-            "keyword": "Before",
-            "hidden": true,
-            "match": {
-              "location": "features\\step_definitions\\steps.js:11"
-            },
-            "result": {
-              "status": "passed"
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Given ",
-            "line": 21,
-            "name": "User is on the entities screen",
-            "match": {
-              "location": "features\\step_definitions\\steps.js:101"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 5031000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "When ",
-            "line": 22,
-            "name": "User selects to hide an entity",
-            "match": {
-              "location": "features\\step_definitions\\steps.js:136"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 1618000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Then ",
-            "line": 23,
-            "name": "User has successfully hidden an entity",
-            "match": {
-              "location": "features\\step_definitions\\steps.js:142"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 233000000
+              "duration": 65000000
             }
           }
         ]

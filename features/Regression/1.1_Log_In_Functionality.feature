@@ -1,4 +1,4 @@
-@BaseURL @Forsight_Regression @Log_In_Functionality
+@BaseURL @Forsight_Regression @Organisation_Settings @Log_In_Functionality
 Feature: Regression: Log In Functionality
 
   @Login_successful
