@@ -1,106 +1,66 @@
 [
   {
     "keyword": "Feature",
-    "name": "Regression: Organisation Settings Functionality",
+    "name": "Testing: Drag and drop functionality",
     "line": 2,
-    "id": "regression:-organisation-settings-functionality",
+    "id": "testing:-drag-and-drop-functionality",
     "tags": [
       {
-        "name": "@BaseURL",
+        "name": "@DragAndDrop",
         "line": 1
       },
       {
-        "name": "@Forsight_Regression",
-        "line": 1
-      },
-      {
-        "name": "@Organisation_Settings",
-        "line": 1
-      },
-      {
-        "name": "@Periods_Functionality",
+        "name": "@PlayboiCarti",
         "line": 1
       }
     ],
-    "uri": "features\\Regression\\3.1_Periods_Functionality.feature",
+    "uri": "features\\Regression\\4.1_Test.feature",
     "elements": [
       {
-        "id": "regression:-organisation-settings-functionality;creating-period-successfully",
+        "id": "testing:-drag-and-drop-functionality;testing-drag-and-drop",
         "keyword": "Scenario",
         "line": 5,
-        "name": "Creating period successfully",
+        "name": "Testing drag and drop",
         "tags": [
           {
-            "name": "@BaseURL",
+            "name": "@DragAndDrop",
             "line": 1
           },
           {
-            "name": "@Forsight_Regression",
+            "name": "@PlayboiCarti",
             "line": 1
           },
           {
-            "name": "@Organisation_Settings",
-            "line": 1
-          },
-          {
-            "name": "@Periods_Functionality",
-            "line": 1
-          },
-          {
-            "name": "@Create_Period",
+            "name": "@Test",
             "line": 4
           }
         ],
         "type": "scenario",
         "steps": [
           {
-            "keyword": "Before",
-            "hidden": true,
-            "match": {
-              "location": "features\\step_definitions\\steps.js:11"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 1000000
-            }
-          },
-          {
             "arguments": [],
             "keyword": "Given ",
             "line": 7,
-            "name": "User is on the periods screen",
+            "name": "User is on page",
             "match": {
-              "location": "features\\step_definitions\\steps.js:146"
+              "location": "features\\step_definitions\\steps.js:173"
             },
             "result": {
               "status": "passed",
-              "duration": 11805000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "When ",
-            "line": 8,
-            "name": "User creates new period",
-            "match": {
-              "location": "features\\step_definitions\\steps.js:158"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 10921000000
+              "duration": 6616000000
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
-            "line": 9,
-            "name": "User has successfully created new period",
+            "line": 8,
+            "name": "Drag and drop success",
             "match": {
-              "location": "features\\step_definitions\\steps.js:169"
+              "location": "features\\step_definitions\\steps.js:176"
             },
             "result": {
               "status": "passed",
-              "duration": 65000000
+              "duration": 13906000000
             }
           }
         ]

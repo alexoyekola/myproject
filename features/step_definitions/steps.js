@@ -1,8 +1,9 @@
 const { client } = require('nightwatch-cucumber')
 const { After, Before, Given, Then, When } = require('cucumber')
-var dragAndDrop = require('html-dnd').codeForSelectors;
+const assert = require('assert');
+const dragAndDrop = require('html-dnd').codeForSelectors;
 var Page = client.page.PageObjects()
-var MyTDate = new Date(); var dd = MyTDate.getDate(); var mm = Number(MyTDate.getMonth())+1; var yyyy = MyTDate.getFullYear()
+var MyTDate = new Date(); var dd = MyTDate.getDate(); var mm = Number(MyTDate.getMonth())+1; var yyyy = MyTDate.getFullYear();
 if(dd<10){ dd='0'+dd }
 if(mm<10){ mm='0'+mm }
 var MyYMDDate = yyyy+'-'+mm+'-'+dd; var MyDMYDate = dd+"-"+mm+"- "+yyyy
@@ -158,7 +159,7 @@ Given(/^User is on the periods screen/, () => {
 When(/^User creates new period/, () => {
     Page.waitForElementVisible('@NewPeriodBtn').click('@NewPeriodBtn')
     Page.waitForElementVisible('@NewPeriodNameInput').setValue('@NewPeriodNameInput', 'test_Monthly')
-    client.pause(8000)
+    client.pause(5000)
     Page.waitForElementVisible('@SelectDateBtn').click('@SelectDateBtn')
     Page.click('@SelectDateBtn')
     Page.waitForElementVisible('@DateAug01').click('@DateAug01')
@@ -168,4 +169,16 @@ When(/^User creates new period/, () => {
 })
 Then(/^User has successfully created new period/, () => {
     return Page.waitForElementVisible('@SuccessfulMessage')
+})
+Given(/^User is on page/, () => {
+    return client.url('https://www.w3schools.com/html/html5_draganddrop.asp')
+})
+Then(/^Drag and drop success/, () => {
+    Page.waitForElementVisible('@EleFrom')
+    Page.moveToElement('#drag1', 5, 5)
+    client.mouseButtonDown(0)
+    Page.moveToElement('#div2', 5, 5)
+    client.pause(3000)
+    client.mouseButtonUp(0)
+    return client.pause(3000)
 })

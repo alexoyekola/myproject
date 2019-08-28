@@ -2,16 +2,20 @@
 module.exports = {
     url: 'https://hellouat.forsight.online/auth',
     elements: {
+        EleFrom: {selector: '#drag1', locateStrategy: 'css selector'},
+        EleTo: {selector: '#div2', locateStrategy: 'css selector'},
 // Login Page
         Logo: {selector: '#left-menu > div:nth-child(6) > img', locateStrategy: 'css selector'},
         UsernameInput: {selector: '#continueInput', locateStrategy: 'css selector'},
         PasswordInput: {selector: '#userExistsPassword', locateStrategy: 'css selector'},
         ConfirmUsername: {selector: 'body > app-root > div.main-content > div > auth > div > div.col-8.col-lg-4.col-md-6 > div.row.form-container.m-t-30 > div.col-12.m-t-24 > button', locateStrategy: 'css selector'},
         LoginBtn: {selector: 'body > app-root > div.main-content > div > auth > div > div.col-8.col-lg-4.col-md-6 > div.row.form-container > div > div:nth-child(4) > div > div > button', locateStrategy: 'css selector'},
+
 // Process Management
         ProcessManagementIcon: {selector: '//*[@id="left-menu"]/ul/li[1]/img', locateStrategy: 'xpath'},
         ProcessManagementText: {selector: '//*[@id="left-menu"]/ul/li[1]/div[2]', locateStrategy: 'xpath'},
         DesignsIcon: {selector: '//*[@id="process-management-expandable"]/li[2]/div[1]', locateStrategy: 'xpath'},
+      
         // Designs Screen
         AddDesignBtn: {selector: 'body > app-root > div.main-content > div > account > div > div.row.m-t-40 > div > add-button.float-right.m-l-16.ng-star-inserted > div > div > div.add-button', locateStrategy: 'css selector'},
         DesignNameInput: {selector: 'body > app-root > div.main-content > div > new-process-definition > div > div:nth-child(2) > div.col-lg-7 > input', locateStrategy: 'css selector'},
@@ -24,11 +28,13 @@ module.exports = {
         Create_DesignBtn: {selector: 'body > app-root > div.main-content > div > new-process-definition > div > div:nth-child(8) > div.col-md-12.m-t-40 > button.form-btn.float-right.footer-btn-pos.m-l-24.ng-star-inserted', locateStrategy: 'css selector'},
         DesignUpdatedPopUp: {selector: 'body > div.cdk-visually-hidden', locateStrategy: 'css selector'},
         SaveBtn: {selector: 'body > app-root > div.main-content > div > new-process-definition > div > div:nth-child(8) > div.col-md-12.m-t-40 > button.form-btn.float-right.footer-btn-pos.m-l-24', locateStrategy: 'css selector'},
-                // Activity Page
+              
+        // Activity Page
         NewActivityBtn: {selector: '//*[@id="add-activity-btn"]/div/div/div', locateStrategy: 'xpath'},
         ActivityDD: {selector: '//*[@id="1b24b4a3-ead6-edfa-cef1-8d3059b334e3"]/span/img', locateStrategy: 'xpath'},
         AddActivityBtn: {selector: '#add-activity-dropdown > div > div.body > button', locateStrategy: 'css selector'},
-                        // Activity Details
+                       
+                // Activity Details
         UploadTableDataActivity: {selector: '//*[@id="activity-diagram-component"]/svg/g/g[2]/g[4]/g/text', locateStrategy: 'xpath'},
         TransformTableDataActivity: {selector: '//*[@id="activity-diagram-component"]/svg/g/g[2]/g[6]/rect', locateStrategy: 'xpath'},
         VATSummaryActivity: {selector :'#activity-diagram-component > svg > g > g:nth-child(2) > g:nth-child(12) > g > text', locateStrategy: 'css selector'},
@@ -39,6 +45,7 @@ module.exports = {
         SelectHeaderRowInput: {selector: '#collapseExample--522888603 > div > fieldset > table > tbody > tr:nth-child(1) > td:nth-child(2) > input', locateStrategy: 'css selector'},
         ConfirmHeadRowBtn: {selector: '#collapseExample--522888603 > div > fieldset > table > tbody > tr:nth-child(2) > td > button:nth-child(2)', locateStrategy: 'css selector'},
         ConfirmSelectionBtn: {selector: '#container-d1eade08-3659-4f74-843a-c3406a7ed378 > div > div:nth-child(1) > div:nth-child(17) > fieldset > button', locateStrategy: 'css selector'},
+
 // Organisation Settings
         OrganisationSettingsIcon: {selector: '//*[@id="left-menu"]/ul/li[2]/img', locateStrategy: 'xpath'},
         OrganisationSettingsText: {selector: '//*[@id="left-menu"]/ul/li[2]/div[2]', locateStrategy: 'xpath'},
@@ -49,6 +56,7 @@ module.exports = {
         AttributesIcon: {selector: '//*[@id="organisation-settings-expandable"]/li[5]/div[1]', locateStrategy: 'xpath'},
         SettingsIcon: {selector: '//*[@id="organisation-settings-expandable"]/li[6]/div[1]', locateStrategy: 'xpath'},
         SuccessfulMessage: {selector: '/html/body/div[1]', locateStrategy: 'xpath'},
+        
         //Entities 
         EntitiesTitle: {selector: '/html/body/app-root/div[2]/div/account/div/div[2]/app-entities/h4', locateStrategy: 'xpath'},
         NewEntityBtn: {selector: '/html/body/app-root/div[2]/div/account/div/div[1]/div/add-button[1]/div/div/div[1]', locateStrategy: 'xpath'},
@@ -60,6 +68,7 @@ module.exports = {
         CopyEntityBtn: {selector: '#cdk-overlay-0 > div > div > button:nth-child(1)', locateStrategy: 'css selector'},
         CopyBtn: {selector: '//*[@id="cloneModal"]/div/div/div[3]/button[2]', locateStrategy: 'xpath'},
         HideEntityBtn: {selector: '#cdk-overlay-0 > div > div > button:nth-child(2)', locateStrategy: 'css selector'},
+        
         //Periods
         NewPeriodBtn: {selector: '/html/body/app-root/div[2]/div/account/div/div[1]/div/add-button/div/div/div[2]', locateStrategy: 'xpath'},
         NewPeriodNameInput: {selector: 'body > app-root > div.main-content > div > schedule-edit > div > div.row.m-t-64 > div.col-lg-7 > input', locateStrategy: 'css selector'},

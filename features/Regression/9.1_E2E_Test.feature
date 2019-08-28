@@ -9,4 +9,3 @@ Feature: Regression: End to End Test
     Then    User inputs design details and saves
     Then    User adds activities
     Then    User successfully created new design
-    Then    User updates upload activities
