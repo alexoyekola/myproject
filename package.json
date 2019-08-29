@@ -1,11 +1,13 @@
 {
-  "name": "AutomationFramework_v1",
+  "name": "AutomationFramework",
   "version": "1.0.0",
   "description": "Automation Scripts",
   "main": "nightwatch.js",
   "repository": {},
   "scripts": {
-    "e2e-test": "nightwatch -c nightwatch_jenkins.js --env chrome -a Critical"
+    "test-e2e": "node nightwatch -e chrome",
+    "Organisation-Settings": "node nightwatch -e chrome -a Organisation_Settings",
+    "Process-Management": "node nightwatch -e chrome -a Process_Management"
   },
   "author": "Alexander Oyekola",
   "license": "ISC",
@@ -20,6 +22,7 @@
     "assert": "^2.0.0",
     "geckodriver": "^1.16.2",
     "jenkins": "^0.25.0",
+    "nightwatch-api": "^2.3.0",
     "pa11y": "^5.1.0",
     "socks": "^2.3.2"
   }

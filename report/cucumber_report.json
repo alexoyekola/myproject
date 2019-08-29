@@ -43,11 +43,11 @@
             "line": 7,
             "name": "User is on page",
             "match": {
-              "location": "features\\step_definitions\\steps.js:173"
+              "location": "features\\step_definitions\\steps.js:172"
             },
             "result": {
               "status": "passed",
-              "duration": 6616000000
+              "duration": 8541000000
             }
           },
           {
@@ -56,11 +56,11 @@
             "line": 8,
             "name": "Drag and drop success",
             "match": {
-              "location": "features\\step_definitions\\steps.js:176"
+              "location": "features\\step_definitions\\steps.js:175"
             },
             "result": {
               "status": "passed",
-              "duration": 13906000000
+              "duration": 10266000000
             }
           }
         ]
