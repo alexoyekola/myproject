@@ -35,7 +35,7 @@ module.exports = {
         AddActivityBtn: {selector: '#add-activity-dropdown > div > div.body > button', locateStrategy: 'css selector'},
                        
                 // Activity Details
-        UploadTableDataActivity: {selector: '//*[@id="activity-diagram-component"]/svg/g/g[2]/g[7]/rect', locateStrategy: 'xpath'},
+        UploadActivity: {selector: '#activity-diagram-component > svg > g > g:nth-child(2) > g:nth-child(8) > g > text', locateStrategy: 'css selector'},
         TransformTableDataActivity: {selector: '//*[@id="activity-diagram-component"]/svg/g/g[2]/g[6]/rect', locateStrategy: 'xpath'},
         VATSummaryActivity: {selector :'#activity-diagram-component > svg > g > g:nth-child(2) > g:nth-child(12) > g > text', locateStrategy: 'css selector'},
         UploadSampleBtn: {selector: '#btnUpload--522888603', locateStrategy: 'css selector'},

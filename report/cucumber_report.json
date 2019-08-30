@@ -1,66 +1,124 @@
 [
   {
     "keyword": "Feature",
-    "name": "Testing: Drag and drop functionality",
+    "name": "Regression: End to End Test",
     "line": 2,
-    "id": "testing:-drag-and-drop-functionality",
+    "id": "regression:-end-to-end-test",
     "tags": [
       {
-        "name": "@DragAndDrop",
+        "name": "@BaseURL",
         "line": 1
       },
       {
-        "name": "@PlayboiCarti",
+        "name": "@Forsight_Regression",
+        "line": 1
+      },
+      {
+        "name": "@E2E_Test",
         "line": 1
       }
     ],
-    "uri": "features\\Regression\\4.1_Test.feature",
+    "uri": "features\\Regression\\9.1_E2E_Test.feature",
     "elements": [
       {
-        "id": "testing:-drag-and-drop-functionality;testing-drag-and-drop",
+        "id": "regression:-end-to-end-test;end-to-end-test---upload-file-mitigated",
         "keyword": "Scenario",
         "line": 5,
-        "name": "Testing drag and drop",
+        "name": "End to End test - upload file mitigated",
         "tags": [
           {
-            "name": "@DragAndDrop",
+            "name": "@BaseURL",
             "line": 1
           },
           {
-            "name": "@PlayboiCarti",
+            "name": "@Forsight_Regression",
             "line": 1
           },
           {
-            "name": "@Test",
+            "name": "@E2E_Test",
+            "line": 1
+          },
+          {
+            "name": "@Flow",
             "line": 4
           }
         ],
         "type": "scenario",
         "steps": [
           {
-            "arguments": [],
-            "keyword": "Given ",
-            "line": 7,
-            "name": "User is on page",
+            "keyword": "Before",
+            "hidden": true,
             "match": {
-              "location": "features\\step_definitions\\steps.js:172"
+              "location": "features\\step_definitions\\steps.js:12"
             },
             "result": {
               "status": "passed",
-              "duration": 8541000000
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "User is on the home page",
+            "match": {
+              "location": "features\\step_definitions\\steps.js:40"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 17022000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 8,
+            "name": "User navigates to design screen",
+            "match": {
+              "location": "features\\step_definitions\\steps.js:49"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1859000000
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
-            "line": 8,
-            "name": "Drag and drop success",
+            "line": 9,
+            "name": "User inputs design details and saves",
             "match": {
-              "location": "features\\step_definitions\\steps.js:175"
+              "location": "features\\step_definitions\\steps.js:59"
             },
             "result": {
               "status": "passed",
-              "duration": 10266000000
+              "duration": 13696000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 10,
+            "name": "User adds activities",
+            "match": {
+              "location": "features\\step_definitions\\steps.js:70"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 84797000000,
+              "error_message": "Timed out while waiting for element <#activity-diagram-component > svg > g > g:nth-child(2) > g:nth-child(8) > g > text> to be present for 30000 milliseconds. - Expected \"visible\" but got: \"not found\"; ERROR; ERROR\n\n    at World.Then (C:\\Users\\AOyekola\\Documents\\AutomationFramework\\features\\step_definitions\\steps.js:75:10)\n\nERROR: Unable to locate element: \"#activity-diagram-component > svg > g > g:nth-child(2) > g:nth-child(8) > g > text\" using: css selector\n    at Proxy.<anonymous> (C:\\Users\\AOyekola\\Documents\\AutomationFramework\\node_modules\\nightwatch\\lib\\page-object\\command-wrapper.js:117:25)\n    at World.Then (C:\\Users\\AOyekola\\Documents\\AutomationFramework\\features\\step_definitions\\steps.js:77:10)\n\nERROR: Unable to locate element: \"//*[@id=\"activity-diagram-component\"]/svg\" using: css selector\n    at Proxy.<anonymous> (C:\\Users\\AOyekola\\Documents\\AutomationFramework\\node_modules\\nightwatch\\lib\\page-object\\command-wrapper.js:117:25)\n    at World.Then (C:\\Users\\AOyekola\\Documents\\AutomationFramework\\features\\step_definitions\\steps.js:79:10)"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 11,
+            "name": "User successfully created new design",
+            "match": {
+              "location": "features\\step_definitions\\steps.js:67"
+            },
+            "result": {
+              "status": "skipped"
             }
           }
         ]
