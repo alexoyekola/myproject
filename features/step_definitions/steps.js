@@ -12,11 +12,11 @@ var FirstTime = 1
 Before("@BaseURL", () => {
     client.url(client.launch_url)
 })
+
 // Login Testing
 Given(/^User is on the login screen$/, () => {  
     return Page.waitForElementVisible('@UsernameInput')
 })
-
 When(/^User enters username: "([^"]*)" and password: "([^"]*)"$/, (username,password) => {  
     // Enter login credentials
     Page.waitForElementVisible('@UsernameInput').setValue('@UsernameInput', 'alexoyekola@piccadillygroup.com')
@@ -45,6 +45,7 @@ Given(/^User is on the home page$/, () => {
     Page.click('@LoginBtn')
     return Page.waitForElementVisible('@Logo')
 })
+
 //Designs Screen
 When(/^User navigates to design screen$/, () => {
     
@@ -108,6 +109,7 @@ Then(/^User updates upload activities$/, () => {
     Page.waitForElementVisible('@SaveBtn').click('@SaveBtn')
     return client.pause(3000)
 })
+
 //Entities Screen
 Given(/^User is on the entities screen$/, () => {
     Page.waitForElementVisible('@UsernameInput').setValue('@UsernameInput', 'alexanderoyekola@piccadillygroup.com')
@@ -122,7 +124,7 @@ Given(/^User is on the entities screen$/, () => {
     return Page.click('@EntitiesIcon')
 })
 When(/^User creates new entity$/, () => {
-    Page.waitForElementVisible('@NewEntityBtn').click('@NewEntityBtn')
+    Page.waitForElementVisible('@AddBtn').click('@AddBtn')
     Page.click('@NewEntityBtn')
     Page.waitForElementVisible('@NewEntityNameInput').setValue('@NewEntityNameInput', 'Test_Entity')
     Page.waitForElementVisible('@NewEntitySaveBtn')
@@ -153,6 +155,7 @@ When(/^User selects to hide an entity$/, () => {
 Then(/^User has successfully hidden an entity$/, () => {
     return Page.waitForElementVisible('@SuccessfulMessage')
 })
+
 //Periods screen 
 Given(/^User is on the periods screen$/, () => {
     Page.waitForElementVisible('@UsernameInput').setValue('@UsernameInput', 'alexanderoyekola@piccadillygroup.com')
@@ -167,7 +170,7 @@ Given(/^User is on the periods screen$/, () => {
     return Page.click('@PeriodsIcon')
 })
 When(/^User creates new period$/, () => {
-    Page.waitForElementVisible('@NewPeriodBtn').click('@NewPeriodBtn')
+    Page.waitForElementVisible('@AddBtn').click('@AddBtn')
     Page.waitForElementVisible('@NewPeriodNameInput').setValue('@NewPeriodNameInput', 'test_Monthly')
     client.pause(5000)
     Page.waitForElementVisible('@SelectDateBtn').click('@SelectDateBtn')
@@ -180,11 +183,100 @@ When(/^User creates new period$/, () => {
 Then(/^User has successfully created new period$/, () => {
     return Page.waitForElementVisible('@SuccessfulMessage')
 })
-Given(/^User is on page$/, () => {
-    return client.url("http://jqueryui.com/resources/demos/draggable/default.html")
+
+//Users Screen
+Given(/^User is on the users screen$/, () => {
+    Page.waitForElementVisible('@UsernameInput').setValue('@UsernameInput', 'alexanderoyekola@piccadillygroup.com')
+    Page.waitForElementVisible('@ConfirmUsername').click('@ConfirmUsername')
+    Page.waitForElementVisible('@PasswordInput').setValue('@PasswordInput', 'Dragonfly1!')
+    Page.click('@LoginBtn')
+    Page.waitForElementVisible('@Logo')
+    Page.waitForElementVisible('@OrganisationSettingsIcon', 30000).click('@OrganisationSettingsIcon')
+    client.pause(1000)
+    Page.waitForElementVisible('@OrganisationSettingsText')
+    Page.waitForElementVisible('@UsersIcon', 30000).click('@UsersIcon')
+    return Page.click('@UsersIcon')    
+})
+When(/^User sends invitation link$/, () => {
+    Page.waitForElementVisible('@AddBtn').click('@AddBtn')
+    Page.waitForElementVisible('@EmailAddInput').setValue('@EmailAddInput', 'alexoyekola@gmail.com')
+    Page.waitForElementVisible('@FullNameInput').setValue('@FullNameInput', 'Bob McTesting')
+    Page.waitForElementVisible('@JobTitleInput').setValue('@JobTitleInput', 'Tester')
+    Page.waitForElementVisible('@InvitationMessage').setValue('@InvitationMessage', 'Testing invite functionality')
+    client.pause(3000)
+    Page.waitForElementVisible('@InviteBtn')
+    return Page.click('@InviteBtn')
+})
+Then(/^User has successfully invited a new user$/, () => {
+    return Page.waitForElementVisible('@SuccessfulMessage')
+})
+When(/^User attempts to hide a user$/, () => {
+    Page.waitForElementVisible('@UserDetailsBtn').click('@UserDetailsBtn')
+    Page.waitForElementVisible('@HideUserBtn')
+    client.pause(1000)
+    return Page.click('@HideUserBtn')
+})
+Then(/^User has successfully hidden a user$/, () => {
+    return Page.waitForElementVisible('@SuccessfulMessage')
+})
+When(/^User attempts to delete a user$/, () => {
+    Page.waitForElementVisible('@UserDetailsBtn').click('@UserDetailsBtn')
+    Page.waitForElementVisible('@DeleteUserBtn')
+    client.pause(1000)
+    return Page.click('@DeleteUserBtn')
+})
+Then(/^User has successfully deleted a user$/, () => {
+    return Page.waitForElementVisible('@SuccessfulMessage')
+})
+
+//User Groups
+Given(/^User is on the user groups screen$/, () => {
+    Page.waitForElementVisible('@UsernameInput').setValue('@UsernameInput', 'alexanderoyekola@piccadillygroup.com')
+    Page.waitForElementVisible('@ConfirmUsername').click('@ConfirmUsername')
+    Page.waitForElementVisible('@PasswordInput').setValue('@PasswordInput', 'Dragonfly1!')
+    Page.click('@LoginBtn')
+    Page.waitForElementVisible('@Logo')
+    Page.waitForElementVisible('@OrganisationSettingsIcon', 30000).click('@OrganisationSettingsIcon')
+    client.pause(1000)
+    Page.waitForElementVisible('@OrganisationSettingsText')
+    Page.waitForElementVisible('@UserGroupsIcon', 30000).click('@UserGroupsIcon')
+    return Page.click('@UserGroupsIcon')    
+})
+When(/^User creates user group with members$/, () => {
+    Page.waitForElementVisible('@AddBtn').click('@AddBtn')
+    Page.waitForElementVisible('@UserGroupNameInput').setValue('@UserGroupNameInput', 'Test_Group')
+    Page.waitForElementVisible('@AddMembersInput').setValue('@AddMembersInput', 'Lexi')
+    Page.waitForElementVisible('@SuggestedName').click('@SuggestedName')
+    Page.waitForElementVisible('@AddMembersBtn').click('@AddMembersBtn')
+    Page.waitForElementVisible('@NewUserGroupSaveBtn')
+    return Page.click('@NewUserGroupSaveBtn')
+})
+Then(/^User successfully created a new user group$/, () => {
+    return Page.waitForElementVisible('@SuccessfulMessage')
+})
+When(/^User opens a user group and deletes a user$/, () => {
+    Page.waitForElementVisible('@UserGroupExm').click('@UserGroupExm')
+    Page.waitForElementVisible('@DeleteUserDetailsBtn').click('@DeleteUserDetailsBtn')
+    Page.waitForElementVisible('@UGDeleteUserBtn').click('@UGDeleteUserBtn')
+    Page.waitForElementVisible('@NewUserGroupSaveBtn')
+    return Page.click('@NewUserGroupSaveBtn')
+})
+Then(/^User successfully deleted a user within a user group$/, () => {
+    return Page.waitForElementVisible('@SuccessfulMessage')
+})
+When(/^User deletes a created user group$/, () => {
+    Page.waitForElementVisible('@UserGroupExm').click('@UserGroupExm')
+    Page.waitForElementVisible('@DeleteUserGroup')
+    return Page.click('@DeleteUserGroup')
+})
+Then(/^User successfully deleted a user group$/, () => {
+    return Page.waitForElementVisible('@SuccessfulMessage')
 })
 
 //TEST TO IMPLEMENT DRAG AND DROP
+Given(/^User is on page$/, () => {
+    return client.url("http://jqueryui.com/resources/demos/draggable/default.html")
+})
 Then(/^Drag and drop success$/, () => {
     client.useCss()
     Page.waitForElementVisible('#draggable', 5000);
@@ -195,6 +287,7 @@ Then(/^Drag and drop success$/, () => {
     client.mouseButtonUp(0)
     return client.pause(5000)  // Keep browser open for 10 seconds so you can see result
 })
+
 
 //DRAG AND DROP ON AN ACTIVITY
 /* 
